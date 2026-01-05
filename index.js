@@ -1,10 +1,10 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const consign = require("consign");
 const db = require('./config/db.js');
 const mongoose = require('mongoose');
 require('./config/mongodb.js');
-require('dotenv').config();
 
 app.db = db;
 app.mongoose = mongoose;

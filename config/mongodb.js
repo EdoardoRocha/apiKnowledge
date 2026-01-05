@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const {mongoUrl} = require('../.env');
 
-mongoose.connect(mongoUrl.url)
+mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log("Mongo conectado!"))
     .catch(e => {
         const msg = '[ERROR] Não foi possível com o MongoDB!'
